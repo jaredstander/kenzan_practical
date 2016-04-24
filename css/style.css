@@ -1,6 +1,14 @@
-body {font-family:sans-serif; padding:0; margin:0;}
-#container {width:50%;}
-h1 {text-align:center;}
-#left-col {float:left;}
-#right-col {float:right; text-align:right;}
-#footer {clear:both;}
+body {font-family:sans-serif; padding:0; margin:2%;}
+form {margin:0;}
+h3 {text-align:center; background-color:#f90; color:#00a; padding:5px 0;}
+
+#coins-field {text-align:center;}
+#container {width:50%; border-style:solid; border-color:#f90; border-width:1px; padding:0;}
+#conversion-banner {margin-top:0;}
+#footer {clear:both; margin-bottom:0;}
+#header {margin-top:0;}
+#inner-container {padding:0 0 2% 0; border-style:solid; border-color:#f90; border-width:1px; width:90%; margin:0 auto;}
+#left-col {width:47%; display:inline-block; padding-left:2%;}
+#right-col {width:47%; text-align:right; display:inline-block; padding-right:2%;}
+
+.col-heading {font-weight:bold;}

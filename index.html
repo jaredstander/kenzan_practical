@@ -1,20 +1,23 @@
-<html>
+<html ng-app="coinageApp">
   <head>
     <meta charset="UTF-8">
     <meta name="author" content="Jared Stander">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/angular.min.js" type="text/javascript"></script>
+    <script src="js/coinageApp.js" type="text/javascript"></script>
   </head>
   <body>
-    <div id="container">
-      <form>
-        <h1>Coinage</h1>
-        <p>Enter monetary value for conversion: <input type="text" name="coins" value="0" /> <button>Convert</button></p>
-        <h1>Converting X pennies into coins</h1>
-        <div id="output">
+    <div id="container" ng-controller="coinageController">
+      <form ng-submit="convertCoins()">
+        <h3 id="header">Coinage</h3>
+        <p id="coins-field">Enter monetary value for conversion: <input ng-model="coinsInput" type="text" size="4" /> <input type="submit" value="Convert" /></p>
+        <div id="inner-container">
+          <h3 id="conversion-banner">Converting {{parsedCoins}} pennies into coins</h3>
           <div id="left-col"><span class="col-heading">Coin</span><br>1p<br>2p<br>50p<br>&pound;1<br>&pound;2</div>
-          <div id="right-col"><span class="col-heading">Amount</span><br>1p<br>2p<br>50p<br>&pound;1<br>&pound;2</div>
+          <div id="right-col"><span class="col-heading">Amount</span><br>{{onepAmount}}<br>{{twopAmount}}<br>{{fiftypAmount}}<br>&pound;{{onePoundAmount}}<br>&pound;{{twoPoundAmount}}</div>
         </div>
-        <h1 id="footer">&copy; 2016 Coinage</h1>
+        <h3 id="footer">&copy; 2016 Coinage</h3>
       </form>
     </div>
   </body>
