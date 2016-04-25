@@ -28,7 +28,6 @@ angular.module('coinageApp', [])
     // £1.257422457p | 126               | rounding with symbols
 
     // BAD input cases
-    // input     | pence (canonical) | description
     //           | 0                 | empty string
     // 1x        | 0                 | non-numeric character
     // £1x.0p    | 0                 | non-numeric character
@@ -54,7 +53,7 @@ angular.module('coinageApp', [])
   }
 
   $scope.parseInput = function(){
-
+    // Is there a decimal? If so, we already know what part is pounds, and which part is pennies.
     if(String($scope.coinsInput).match(/[.]/) != null){
       var scrubbedInput = String($scope.coinsInput).match(/\d+[.]\d+/)[0];
       // Pull out just the numbers, then round to 2 places.
