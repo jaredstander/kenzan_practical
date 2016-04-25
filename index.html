@@ -11,7 +11,7 @@
     <div id="container" ng-controller="coinageController">
       <form ng-submit="convertCoins()">
         <h3 id="header">Coinage</h3>
-        <p id="coins-field">Enter monetary value for conversion: <input ng-model="coinsInput" type="text" size="4" /> <input type="submit" value="Convert" /></p>
+        <p id="coins-field">Enter monetary value for conversion: <input ng-model="coinsInput" type="text" size="10" maxlength="10" /> <input type="submit" value="Convert" /></p>
         <div id="inner-container">
           <h3 id="conversion-banner">Converting {{parsedCoins}} pennies into coins</h3>
           <div id="left-col"><span class="col-heading">Coin</span><br>1p<br>2p<br>50p<br>&pound;1<br>&pound;2</div>
